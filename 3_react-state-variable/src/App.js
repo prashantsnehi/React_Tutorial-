@@ -1,3 +1,4 @@
+import ArrayStateComponent from './ArrayStateComponent';
 import './App.css';
 import StateComponent from './StateComponent';
 
@@ -8,7 +9,10 @@ function App() {
       <p>This is a simple example of using state variables in a React application.</p>
       <hr />
       <StateComponent />
+      <hr />
+      <ArrayStateComponent />
     </div>
+    
   );
 }
 
