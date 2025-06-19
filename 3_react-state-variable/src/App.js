@@ -3,6 +3,7 @@ import './App.css';
 import StateComponent from './StateComponent';
 import ObjectComponent from './ObjectComponent';
 import ArrayObjectComponent from './ArrayObjectComponent';
+import ProductComponent from './ProductComponent';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       <ObjectComponent />
       <hr />
       <ArrayObjectComponent />
+      <hr />
+      <ProductComponent />
     </div>
     
   );
