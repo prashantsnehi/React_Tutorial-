@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 
 let ProductComponent = () => {
@@ -36,13 +37,11 @@ let ProductComponent = () => {
 
     var [value, setValue] = useState("All");
     const handleChange = (e) => {
-        setValue(e.target.value);
-        // value === "All" ? setSelectedProduct(products) : setSelectedProduct(products.filter(f => f.productName === value));
-        updateTable();
-    }
-
-    const updateTable = (e) => {
-        value === "All" ? setSelectedProduct(products) : setSelectedProduct(products.filter(f => f.productName === value));
+        const selectedValue = e.target.value;
+        setValue(selectedValue);
+        selectedValue === "All"
+            ? setSelectedProduct(products)
+            : setSelectedProduct(products.filter(f => f.productName === selectedValue));
     }
 
     return (
@@ -57,6 +56,11 @@ let ProductComponent = () => {
                     ))
                 }
             </select>
+            <button onClick={() => {
+                value === "All"
+                    ? setSelectedProduct(products)
+                    : setSelectedProduct(products.filter(f => f.productName === value));
+            }}>Filter</button>
             <br />
             <br />
             <table border="1" cellPadding="10" cellSpacing="5" style={{ margin: "auto", width: "80%" }}>
