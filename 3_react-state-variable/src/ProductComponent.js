@@ -36,15 +36,15 @@ const handleChange = (e) => {
 
     return (
         <div>
-            <h3>Product List</h3>
-            <select onChange={handleChange} value={value} style={{ margin: "20px", padding: "10px", fontSize: "16px" }}>
+            <h1>Product List</h1>
+            <select onChange={handleChange} value={value} style={{ margin: "20px", padding: "10px", fontSize: "20px", width: "80%" }}>
                 {
                     options.map((option, index) => (
                         <option key={index} value={option} onClick={handleChange}>{option}</option>
                     ))
                 }
             </select>
-            <table border="1" cellPadding="10" cellSpacing="5" style={{ width: "80%", textAlign: "center", margin: "auto" }}>
+            <table border="1" cellPadding="10" cellSpacing="5" style={{ width: "80%", textAlign: "center", margin: "auto", fontSize: "20px" }}>
                 <thead>
                     <tr style={{ backgroundColor: "blue", color: "white" }}>
                         <th style={{ width: "10%" }}>ID</th>
@@ -59,7 +59,8 @@ const handleChange = (e) => {
                     {
                         selectedProduct.map((product) => (
                             // <tr key={product.id}  style={product.inStock ? {backgroundColor: "green", color: "white"} : {backgroundColor: "red", color:"white"}}>
-                            <tr key={product.id} style={{ backgroundColor: product.inStock ? "green" : "red", color: "white" }}>
+                            // <tr key={product.id} style={{ backgroundColor: product.inStock ? "green" : "red", color: "white" }}>
+                            <tr key={product.id}>
                                 <td style={{ textAlign: "right" }}>{product.id}</td>
                                 <td>
                                     <img src={product.image} alt={product.name} style={{ width: "200px", height: "200px", borderRadius: "10%" }} />
@@ -72,11 +73,11 @@ const handleChange = (e) => {
                         ))
                     }
                     <tr style={{ backgroundColor: "blue", color: "white" }}>
-                        <td><strong>Total Products: {products.length}</strong></td>
+                        <td colSpan={2}><strong>Total Products: {selectedProduct.length}</strong></td>
+                        
+                        <td><strong>In Stock Products: {selectedProduct.filter(product => product.inStock).length}</strong></td>
                         <td></td>
-                        <td><strong>In Stock Products: {products.filter(product => product.inStock).length}</strong></td>
-                        <td></td>
-                        <td style={{ textAlign: "right" }}><strong>Total: ${products.reduce((total, products) => total + products.price, 0).toFixed(2)}</strong></td>
+                        <td style={{ textAlign: "right" }}><strong>Total: ${selectedProduct.reduce((total, products) => total + products.price, 0).toFixed(2)}</strong></td>
                         <td></td>
                     </tr>
                 </tbody>
