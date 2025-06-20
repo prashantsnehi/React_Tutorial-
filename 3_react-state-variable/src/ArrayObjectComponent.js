@@ -10,6 +10,8 @@ let ArrayObjectComponent = () => {
         <div>
             <h3>This component demonstrates how to use state variables with arrays of objects in React.</h3>
             <h4>Array of User Objects</h4>
+            <p>Syntax: let [users, setUsers] = useState([...]);</p>
+            <p>Here is a list of users with their details:</p>
             <table border="1" cellPadding="10" cellSpacing="5" style={{ width: "80%", textAlign: "center", margin: "auto" }}>
                 <thead>
                     <tr>

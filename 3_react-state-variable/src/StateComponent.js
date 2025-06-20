@@ -9,7 +9,7 @@ function StateComponent() {
             <h3>This component demonstrates how to use state variables in React.</h3>
             <h4>Premitivie Type variables</h4>
             <h5>Syntax: let [id, setId] = useState(1);</h5>
-            <p>id: {id},  Name: {name}, Activation Status: {isActive ? "Yes" : "No"} having balance: {balance}</p>
+            <p>id: {id},  Name: {name}, Activation Status: {isActive ? "Active" : "Inactive"} having balance: ${balance}</p>
         </div>
     );
 }
