@@ -23,16 +23,16 @@ let ProductComponent = () => {
         { id: 19, name: "Smartphone", brandName: "Realme", price: 199.99, inStock: true, image: "https://img-prd-pim.poorvika.com/product/Realme-13-5g-speed-green-256gb-8gb-ram-Front-Back-View.png" },
     ]);
 
-let [selectedProduct, setSelectedProduct] = useState(products);
-let [options, setOptions] = useState(["All", ...new Set(products.map(product => product.brandName))]);
-let [value, setValue] = useState("All");
-const handleChange = (e) => {
-    const selectedValue = e.target.value;
-    setValue(selectedValue);
-    selectedValue === "All"
-        ? setSelectedProduct(products)
-        : setSelectedProduct(products.filter(product => product.brandName === selectedValue));
-};
+    let [selectedProduct, setSelectedProduct] = useState(products);
+    let [options, setOptions] = useState(["All", ...new Set(products.map(product => product.brandName))]);
+    let [value, setValue] = useState("All");
+    const handleChange = (e) => {
+        const selectedValue = e.target.value;
+        setValue(selectedValue);
+        selectedValue === "All"
+            ? setSelectedProduct(products)
+            : setSelectedProduct(products.filter(product => product.brandName === selectedValue));
+    };
 
     return (
         <div>
@@ -74,7 +74,7 @@ const handleChange = (e) => {
                     }
                     <tr style={{ backgroundColor: "blue", color: "white" }}>
                         <td colSpan={2}><strong>Total Products: {selectedProduct.length}</strong></td>
-                        
+
                         <td><strong>In Stock Products: {selectedProduct.filter(product => product.inStock).length}</strong></td>
                         <td></td>
                         <td style={{ textAlign: "right" }}><strong>Total: ${selectedProduct.reduce((total, products) => total + products.price, 0).toFixed(2)}</strong></td>
