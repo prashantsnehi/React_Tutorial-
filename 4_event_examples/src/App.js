@@ -1,8 +1,9 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import SimpleEvent from './SimpleEvent';
-import EmployeeState from './EmployeeSate';
-import ProductArrayState from './ProductArrayState';
+// import SimpleEvent from './SimpleEvent';
+// import EmployeeState from './EmployeeSate';
+// import ProductArrayState from './ProductArrayState';
+import Products from './Products';
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
       {/* <hr /> */}
       {/* <EmployeeState /> */}
       <hr />
-      <h2>Product Array State Example</h2>
-      <ProductArrayState />
+      {/* <h2>Product Array State Example</h2> */}
+      {/* <ProductArrayState /> */}
+      <Products />
     </div>
   );
 }
