@@ -36,35 +36,66 @@ let LoginWithPremitiveState = () => {
                     <div className="card-header text-center">
                         <h1 className="text-center my-4">Login Form</h1>
                     </div>
-                    <img src={imgUrl2}
-                        // className="card-img-top" 
+                    {/* <img src={imgUrl2}
+                        className="card-img-top" 
                         style={{ width: '300px', height: 'auto', alignContent: 'center', margin: '0 auto' }}
-                        alt="..."></img>
+                        alt="..."></img> */}
                     <div className="card-body">
+                        <div className="row mb-3 p-4">
+                            <div className="col-md-12 text-center" style={{ border: '5px solid #ccc', padding: '20px', borderRadius: '50%' }}>
+                                <img src={imgUrl2}
+                                    // className="card-img-top" 
+                                    style={{ width: '250px', height: 'auto', alignContent: 'center', margin: '0 auto' }}
+                                    alt="..."></img>
+                            </div>
+                        </div>
                         <form onSubmit={handleLogin}>
-                            <div className="mb-3">
+                            <div className="form-floating mb-3">
+                                <input type="email" 
+                                    className="form-control" 
+                                    id="email" 
+                                    placeholder="name@example.com"
+                                    value={login.email}
+                                    onChange={(e) => setLogin({...login, email: e.target.value})}
+                                    onKeyUp={(e) => setErrorEmail('')}
+                                     />
+                                <label for="floatingInput">Email address</label>
+                                {errorEmail && <div className="text-danger">{errorEmail}</div>}
+                            </div>
+                            <div className="form-floating">
+                                <input type="password" 
+                                    className="form-control" 
+                                    id="password" 
+                                    placeholder="Password" 
+                                    value={login.password}
+                                    onChange    ={(e) => setLogin({...login, password: e.target.value})}
+                                    onKeyUp={(e) => setErrorPassword('')}/>
+                                <label for="floatingPassword">Password</label>
+                                {errorPassword && <div className="text-danger">{errorPassword}</div>}
+                            </div>
+                            {/* <div className="mb-3 p-2">
                                 <label htmlFor="email" className="form-label">Email:</label>
-                                <input type="email" className="form-control" id="email" 
-                                    value={login.email} 
-                                    onChange={(e) => setLogin({...login, email: e.target.value})} 
+                                <input type="email" className="form-control" id="email"
+                                    value={login.email}
+                                    onChange={(e) => setLogin({ ...login, email: e.target.value })}
                                     onKeyUp={(e) => e.target.value.length > 0 ? setErrorEmail('') : errorEmail} />
                                 {errorEmail && <div className="text-danger">{errorEmail}</div>}
                             </div>
-                            <div className="mb-3">
+                            <div className="mb-3 p-2">
                                 <label htmlFor="password" className="form-label">Password:</label>
-                                <input type="password" className="form-control" 
-                                    id="password" 
-                                    value={login.password} 
+                                <input type="password" className="form-control"
+                                    id="password"
+                                    value={login.password}
                                     onChange={(e) => setLogin({ ...login, password: e.target.value })}
                                     onKeyUp={(e) => e.target.value.length > 0 ? setErrorPassword('') : errorPassword} />
                                 {errorPassword && <div className="text-danger">{errorPassword}</div>}
-                            </div>
-                            <div className="row mb-3">
+                            </div> */}
+                            <div className="row mb-3 p-2">
                                 <div class="d-grid gap-2 col-6 mx-auto">
                                     <button className="btn btn-primary" type="submit">Login</button>
                                 </div>
                                 <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button className="btn btn-danger" type="button">Sign In</button>
+                                    <button className="btn btn-secondary" type="button">Sign In</button>
                                 </div>
                             </div>
                             {message && <p style={{ color: message === "Login successful!" ? "green" : "red" }}>{message}</p>}
