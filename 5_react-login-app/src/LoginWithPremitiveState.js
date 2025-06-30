@@ -8,7 +8,7 @@ let LoginWithPremitiveState = () => {
     let handleLogin = (event) => {
         event.preventDefault(); // Prevent form submission
         // Simple validation logic
-        if ( username.length === 0) {
+        if (username.length === 0) {
             setMessage('Username is required.');
         } else if (password.length === 0) {
             setMessage('Password is required.');
@@ -32,7 +32,7 @@ let LoginWithPremitiveState = () => {
                 <br />
                 <button type="submit">Login</button>
             </form>
-            {message && <p style={{color: message == "Login successful!" ? "green" : "red"}}>{message}</p>}
+            {message && <p style={{ color: message == "Login successful!" ? "green" : "red" }}>{message}</p>}
         </div>
     );
 }

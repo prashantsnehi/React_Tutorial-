@@ -1,0 +1,70 @@
+{
+	"employee": [
+		{
+			"id": 1,
+			"empName": "Rahul",
+			"role": "Batter",
+			"salary": 4000
+		},
+		{
+			"id": 2,
+			"empName": "Yashvi",
+			"role": "Batter",
+			"salary": 3500
+		},
+		{
+			"id": 3,
+			"empName": "Sai Sudarshan",
+			"role": "Batter",
+			"salary": 1400
+		},
+		{
+			"id": 4,
+			"empName": "Subhman",
+			"role": "Batter",
+			"salary": 5000
+		},
+		{
+			"id": 5,
+			"empName": "Rishabh",
+			"role": "Wicket-keeper",
+			"salary": 4000
+		},
+		{
+			"id": 6,
+			"empName": "Shreyas",
+			"role": "Batter",
+			"salary": 2000
+		},
+		{
+			"id": 7,
+			"empName": "Ravinder",
+			"role": "Allrounder",
+			"salary": 2000
+		},
+		{
+			"id": 8,
+			"empName": "Nithish",
+			"role": "Allrounder",
+			"salary": 1000
+		},
+		{
+			"id": 9,
+			"empName": "Kuldeep",
+			"role": "Bowler",
+			"salary": 1500
+		},
+		{
+			"id": 10,
+			"empName": "Jaspreet",
+			"role": "Bowler",
+			"salary": 3000
+		},
+		{
+			"id": 11,
+			"empName": "Siraj",
+			"role": "Bowler",
+			"salary": 2000
+		}
+	]
+}

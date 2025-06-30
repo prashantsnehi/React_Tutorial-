@@ -32,7 +32,7 @@ let LoginWithPremitiveState = () => {
     return (
         <div className="row mb-4 flex justify-content-end">
             <div className="col-md-4 m-4">
-                <div className="card">
+                <div className="card" style={{opacity: '0.8'}}>
                     <div className="card-header text-center">
                         <h1 className="text-center my-4">Login Form</h1>
                     </div>
