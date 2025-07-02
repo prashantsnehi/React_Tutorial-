@@ -60,11 +60,11 @@ let ListEmployees = () => {
 
     return (
         <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-12 mb-4">
                 {displayModal ? <UpdateEmployee emp={employeeToUpdate} onChild={handleChildData} /> : <AddEmployeeComponent />}
             </div>
-            <div className="col-md-8">
-                <div className="card">
+            <div className="col-md-12">
+                <div className="card rounded">
                     <div className="card-header text-center">Employee List</div>
                     <div className="card-body">
                         <table className="table table-striped table-bordered">

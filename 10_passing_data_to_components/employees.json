@@ -54,6 +54,61 @@
       "id": "b3a6",
       "empName": "Phil Tufnel",
       "empSalary": "1800"
+    },
+    {
+      "id": "6834",
+      "empName": "Yashasvi Jaiswal",
+      "empSalary": "1200"
+    },
+    {
+      "id": "0548",
+      "empName": "K L Rahul",
+      "empSalary": "2500"
+    },
+    {
+      "id": "0898",
+      "empName": "Karun Nair",
+      "empSalary": "1200"
+    },
+    {
+      "id": "d176",
+      "empName": "Shubham Gill",
+      "empSalary": "2500"
+    },
+    {
+      "id": "7af4",
+      "empName": "Rishabh Pant",
+      "empSalary": "2300"
+    },
+    {
+      "id": "68a2",
+      "empName": "Nitish Reddy",
+      "empSalary": "1000"
+    },
+    {
+      "id": "8ae7",
+      "empName": "Ravindra Jadeja",
+      "empSalary": "1900"
+    },
+    {
+      "id": "3f09",
+      "empName": "Kuldeep Yadav",
+      "empSalary": "1400"
+    },
+    {
+      "id": "9141",
+      "empName": "Jaspreet Bumrah",
+      "empSalary": "2500"
+    },
+    {
+      "id": "561f",
+      "empName": "Mohd Siraj",
+      "empSalary": "2000"
+    },
+    {
+      "id": "1520",
+      "empName": "Harshit Rana",
+      "empSalary": "1000"
     }
   ]
 }

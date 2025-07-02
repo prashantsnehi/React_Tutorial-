@@ -36,46 +36,52 @@ let UpdateEmployee = (prop) => {
                     <div className="card-header text-center">Update Employee Details</div>
                     <div className="card-body">
                         <form onSubmit={updateEmployee}>
-                            <div className="form-floating mb-3">
-                                <input type="text"
-                                    className="form-control"
-                                    id="id"
-                                    placeholder="employee Id"
-                                    value={employee.id}
-                                    onChange={(e) => setEmployee({ ...employee, id: e.target.value })}
-                                    readOnly
-                                />
-                                <label for="empName">Employee Id</label>
+                            <div className="row d-flex justify-content-around align-content-between">
+                                <div className="form-floating mb-3 col-md-4" hidden>
+                                    <input type="text"
+                                        className="form-control"
+                                        id="id"
+                                        placeholder="employee Id"
+                                        value={employee.id}
+                                        onChange={(e) => setEmployee({ ...employee, id: e.target.value })}
+                                        readOnly
+                                    />
+                                    <label for="empName">Employee Id</label>
+                                </div>
+                                <div className="form-floating mb-3 col-md-4">
+                                    <input type="text"
+                                        className="form-control"
+                                        id="empName"
+                                        placeholder="employee name"
+                                        value={employee.empName}
+                                        onChange={(e) => setEmployee({ ...employee, empName: e.target.value })}
+                                    />
+                                    <label for="empName">Employee Name</label>
+                                </div>
+                                <div className="form-floating mb-4 col-md-4">
+                                    <input
+                                        type="number"
+                                        className="form-control"
+                                        id="empSalary"
+                                        placeholder="Salary"
+                                        value={employee.empSalary}
+                                        onChange={(e) => setEmployee({ ...employee, empSalary: e.target.value })}
+                                    />
+                                    <label for="empSalary">Salary</label>
+                                </div>
+
+                                <div className="d-grid gap-2 mb-4 col-md-4">
+                                    <input className="btn btn-outline-primary"
+                                        id="btnSubmit"
+                                        type="submit"
+                                        value={btnValue}>
+                                    </input>
+                                </div>
                             </div>
-                            <div className="form-floating mb-3">
-                                <input type="text"
-                                    className="form-control"
-                                    id="empName"
-                                    placeholder="employee name"
-                                    value={employee.empName}
-                                    onChange={(e) => setEmployee({ ...employee, empName: e.target.value })}
-                                />
-                                <label for="empName">Employee Name</label>
+                            <div className="row d-flex justify-content-around align-content-between">
+                                <span style={{ color: 'red', margin: '20px', display: msg.statusText.length == 0 ? 'none' : 'block' }}>Status Code: {msg.status} Status: {msg.statusText}</span>
                             </div>
-                            <div className="form-floating mb-4">
-                                <input
-                                    type="number"
-                                    className="form-control"
-                                    id="empSalary"
-                                    placeholder="Salary"
-                                    value={employee.empSalary}
-                                    onChange={(e) => setEmployee({ ...employee, empSalary: e.target.value })}
-                                />
-                                <label for="empSalary">Salary</label>
-                            </div>
-                            <span style={{ color: 'red', margin: '20px', display: msg.statusText.length == 0 ? 'none' : 'block' }}>Status Code: {msg.status} <br />Status: {msg.statusText}</span>
-                            <div className="d-grid gap-2 mt-4">
-                                <input className="btn btn-outline-primary"
-                                    id="btnSubmit"
-                                    type="submit"
-                                    value={btnValue}>
-                                </input>
-                            </div>
+
                         </form>
                     </div>
                 </div>
