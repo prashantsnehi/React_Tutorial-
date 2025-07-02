@@ -1,64 +1,9 @@
 {
   "employees": [
     {
-      "id": "8366",
-      "empName": "Michael Atherton",
-      "empSalary": "1350"
-    },
-    {
-      "id": "e5be",
-      "empName": "Graham Gooch",
-      "empSalary": "2500"
-    },
-    {
-      "id": "d720",
-      "empName": "Greeme Hick",
-      "empSalary": "1800"
-    },
-    {
-      "id": "4597",
-      "empName": "Robin Smith",
-      "empSalary": "2800"
-    },
-    {
-      "id": "e587",
-      "empName": "Mike Getting",
-      "empSalary": "1300"
-    },
-    {
-      "id": "74f5",
-      "empName": "Alek Stewart",
-      "empSalary": "1700"
-    },
-    {
-      "id": "2e91",
-      "empName": "Daran Gough",
-      "empSalary": "1600"
-    },
-    {
-      "id": "8dd0",
-      "empName": "Glad Stone Small",
-      "empSalary": "1300"
-    },
-    {
-      "id": "64e1",
-      "empName": "Cris Lwis",
-      "empSalary": "1600"
-    },
-    {
-      "id": "054e",
-      "empName": "Malcom Jarvis",
-      "empSalary": "1700"
-    },
-    {
-      "id": "b3a6",
-      "empName": "Phil Tufnel",
-      "empSalary": "1800"
-    },
-    {
       "id": "6834",
       "empName": "Yashasvi Jaiswal",
-      "empSalary": "1200"
+      "empSalary": "1350"
     },
     {
       "id": "0548",
@@ -92,13 +37,13 @@
     },
     {
       "id": "3f09",
-      "empName": "Kuldeep Yadav",
-      "empSalary": "1400"
+      "empName": "Washington Sunder",
+      "empSalary": "1200"
     },
     {
       "id": "9141",
-      "empName": "Jaspreet Bumrah",
-      "empSalary": "2500"
+      "empName": "Akash Deep",
+      "empSalary": "1000"
     },
     {
       "id": "561f",
@@ -106,9 +51,9 @@
       "empSalary": "2000"
     },
     {
-      "id": "1520",
-      "empName": "Harshit Rana",
-      "empSalary": "1000"
+      "id": "ab37",
+      "empName": "Prasidh Krishna",
+      "empSalary": "1100"
     }
   ]
 }

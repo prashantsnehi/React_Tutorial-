@@ -60,18 +60,19 @@ let ListEmployees = () => {
 
     return (
         <div className="row">
-            <div className="col-md-12 mb-4">
+            <div className="col-md-3 mb-3">
                 {displayModal ? <UpdateEmployee emp={employeeToUpdate} onChild={handleChildData} /> : <AddEmployeeComponent />}
             </div>
-            <div className="col-md-12">
+            <div className="col-md-9">
                 <div className="card rounded">
                     <div className="card-header text-center">Employee List</div>
                     <div className="card-body">
-                        <table className="table table-striped table-bordered">
+                        <table className="table table-striped table-bordered table-responsive overflow-x-scroll">
                             <thead>
                                 <tr style={{ textAlign: 'center' }}>
+                                    <th style={{ width: '10%' }}>Sr. No.</th>
                                     <th style={{ width: '10%' }}>Emp Id</th>
-                                    <th style={{ width: '50%' }}>Employee Name</th>
+                                    <th style={{ width: '40%' }}>Employee Name</th>
                                     <th style={{ width: '10%' }}>Salary</th>
                                     <th style={{ width: '10%' }}>Update</th>
                                     <th style={{ width: '10%' }}>View</th>
@@ -80,8 +81,9 @@ let ListEmployees = () => {
                             </thead>
                             <tbody className="table-group-divider">
                                 {
-                                    employees.map(emp =>
-                                        <tr key={emp.id} style={{ textAlign: 'center' }}>
+                                    employees.map((emp, index) =>
+                                        <tr key={emp.id} style={{ textAlign: 'center'}}>
+                                            <td>{index + 1}</td>
                                             <td>{emp.id}</td>
                                             <td>{emp.empName}</td>
                                             <td>{emp.empSalary}</td>

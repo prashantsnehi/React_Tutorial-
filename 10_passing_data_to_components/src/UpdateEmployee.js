@@ -37,7 +37,67 @@ let UpdateEmployee = (prop) => {
                     <div className="card-body">
                         <form onSubmit={updateEmployee}>
                             <div className="row d-flex justify-content-around align-content-between">
-                                <div className="form-floating mb-3 col-md-4" hidden>
+                                <div className="col-md-12 input-group mb-3">
+                                    {/* <label htmlFor="empId">Employee Id</label>
+                                    <input type="text"
+                                        className="form-control"
+                                        value={employee.id}
+                                        disabled
+                                        readonly
+                                    >
+                                    </input> */}
+                                    <span className="input-group-text"
+                                        id="empId"
+                                    >
+                                        Employee Id
+                                    </span>
+                                    <input type="text"
+                                        className="form-control"
+                                        value={employee.id}
+                                        disabled
+                                        readonly
+                                    />
+                                    
+                                </div>
+                                <div className="col-md-12 input-group mb-3">
+                                    {/* <label htmlFor="empName">Employee Name</label>
+                                    <input type="text"
+                                        className="form-control"
+                                        value={employee.empName}
+                                        onChange={(e) => setEmployee({...employee, empName: e.target.value}) }
+                                    >
+                                    </input> */}
+                                    <span className="input-group-text">Name</span>
+                                    <input type="text"
+                                        className="form-control"
+                                        value={employee.empName}
+                                        onChange={(e) => setEmployee({...employee, empName: e.target.value})}
+                                    />
+                                </div>
+                                <div className="col-md-12 input-group mb-3">
+                                    {/* <label htmlFor="empSalary">Salary</label>
+                                    <input type="number"
+                                        className="form-control"
+                                        value={employee.empSalary}
+                                        onChange={(e) => setEmployee({...employee, empSalary: e.target.value}) }
+                                    >
+                                    </input> */}
+                                    <span className="input-group-text">Salary</span>
+                                    <input type="number"
+                                        className="form-control"
+                                        value={employee.empSalary}
+                                        onChange={(e) => setEmployee({...employee, empSalary: e.target.value})} />
+                                </div>
+                                <div className="col-md-12 d-grid gap-2 mb-3">
+                                    <button 
+                                        className="btn btn-outline-primary"
+                                        type="submit"
+                                        id="btnSubmit"
+                                    >
+                                        {btnValue}
+                                    </button>
+                                </div>
+                                {/* <div className="form-floating mb-3 col-md-4" hidden>
                                     <input type="text"
                                         className="form-control"
                                         id="id"
@@ -76,7 +136,7 @@ let UpdateEmployee = (prop) => {
                                         type="submit"
                                         value={btnValue}>
                                     </input>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="row d-flex justify-content-around align-content-between">
                                 <span style={{ color: 'red', margin: '20px', display: msg.statusText.length == 0 ? 'none' : 'block' }}>Status Code: {msg.status} Status: {msg.statusText}</span>
