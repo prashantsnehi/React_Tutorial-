@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import AddEmployeeComponent from "./AddEmployeeComponent";
-import ModelComponent from "./ModalComponent";
 import UpdateEmployee from "./UpdateEmployee";
 
 let ListEmployees = () => {
@@ -12,8 +11,9 @@ let ListEmployees = () => {
     let [displayModal, setDisplayModal] = useState(false);
     let url = 'http://localhost:3000/employees'
     useEffect(() => {
+        debugger
         getEmployees();
-    }, [msg]);
+    }, [msg, displayModal]);
 
     let getEmployees = () => {
         axios.get(url)
@@ -38,20 +38,28 @@ let ListEmployees = () => {
 
     let updateEmployee = (event, emp) => {
         event.preventDefault();
-        if (emp.empName == "" || emp.empSalary <= 0) {
-            setMsg({ status: 500, statusText: 'Invalid Data' });
-            return;
+        console.log(emp)
+        setEmployeeToUpdate(emp);
+        if(displayModal) {
+            setDisplayModal(false)
         }
 
-        axios.put(`${url}/${emp.id}`, emp)
-            .then(response => {
-                setMsg({ status: response.status, statusText: response.statusText });
-                console.log(response);
-            })
-            .catch(error => {
-                setMsg({ status: error.status, statusText: error.statusText });
-                console.log(error);
-            })
+        setDisplayModal(true);
+        
+        // if (emp.empName == "" || emp.empSalary <= 0) {
+        //     setMsg({ status: 500, statusText: 'Invalid Data' });
+        //     return;
+        // }
+
+        // axios.put(`${url}/${emp.id}`, emp)
+        //     .then(response => {
+        //         setMsg({ status: response.status, statusText: response.statusText });
+        //         console.log(response);
+        //     })
+        //     .catch(error => {
+        //         setMsg({ status: error.status, statusText: error.statusText });
+        //         console.log(error);
+        //     })
     }
 
     let handleChildData = (dataFromChild) => {
@@ -61,7 +69,16 @@ let ListEmployees = () => {
     return (
         <div className="row">
             <div className="col-md-3 mb-3">
-                {displayModal ? <UpdateEmployee emp={employeeToUpdate} onChild={handleChildData} /> : <AddEmployeeComponent />}
+                <div className="row mb-3">
+                    <div className="col-md-12">
+                        {displayModal ? <UpdateEmployee emp={employeeToUpdate} onChild={handleChildData} display={displayModal} /> : <AddEmployeeComponent />}
+                    </div>
+                </div>
+                {/* <div className="row">
+                    <div className="col-md-12">
+                        <Test />
+                    </div>
+                </div> */}
             </div>
             <div className="col-md-9">
                 <div className="card rounded">
@@ -82,7 +99,7 @@ let ListEmployees = () => {
                             <tbody className="table-group-divider">
                                 {
                                     employees.map((emp, index) =>
-                                        <tr key={emp.id} style={{ textAlign: 'center'}}>
+                                        <tr key={emp.id} style={{ textAlign: 'center' }}>
                                             <td>{index + 1}</td>
                                             <td>{emp.id}</td>
                                             <td>{emp.empName}</td>
@@ -91,8 +108,7 @@ let ListEmployees = () => {
                                                 <a href="#"
                                                     className="btn btn-outline-info"
                                                     onClick={(event) => {
-                                                        setEmployeeToUpdate({ id: emp.id, empName: emp.empName, empSalary: emp.empSalary })
-                                                        setDisplayModal(true);
+                                                        updateEmployee(event, emp);
                                                     }}>
                                                     <i className="bi bi-person-vcard-fill"></i>
                                                 </a>

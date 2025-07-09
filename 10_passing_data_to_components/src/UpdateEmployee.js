@@ -10,9 +10,10 @@ let UpdateEmployee = (prop) => {
 
     useEffect(() => {
         setEmployee({ id: prop.emp.id, empName: prop.emp.empName, empSalary: prop.emp.empSalary });
+        setDisplayModal(prop.displayModal)
         console.log(prop);
         // prop.displayModal = false;
-    }, [msg])
+    }, [msg, prop.emp.id])
 
     let updateEmployee = (event) => {
         event.preventDefault();
@@ -26,7 +27,9 @@ let UpdateEmployee = (prop) => {
                 setEmployee({ empName: '', salary: 0 })
             })
             .catch(error => console.log(error));
-        prop.onChild(false);
+        setDisplayModal(false);
+        setBtnValue('Updated');
+        prop.onChild(displayModal);
     }
 
     return (
@@ -55,9 +58,9 @@ let UpdateEmployee = (prop) => {
                                         className="form-control"
                                         value={employee.id}
                                         disabled
-                                        readonly
+                                        readOnly
                                     />
-                                    
+
                                 </div>
                                 <div className="col-md-12 input-group mb-3">
                                     {/* <label htmlFor="empName">Employee Name</label>
@@ -71,7 +74,7 @@ let UpdateEmployee = (prop) => {
                                     <input type="text"
                                         className="form-control"
                                         value={employee.empName}
-                                        onChange={(e) => setEmployee({...employee, empName: e.target.value})}
+                                        onChange={(e) => setEmployee({ ...employee, empName: e.target.value })}
                                     />
                                 </div>
                                 <div className="col-md-12 input-group mb-3">
@@ -86,10 +89,10 @@ let UpdateEmployee = (prop) => {
                                     <input type="number"
                                         className="form-control"
                                         value={employee.empSalary}
-                                        onChange={(e) => setEmployee({...employee, empSalary: e.target.value})} />
+                                        onChange={(e) => setEmployee({ ...employee, empSalary: e.target.value })} />
                                 </div>
                                 <div className="col-md-12 d-grid gap-2 mb-3">
-                                    <button 
+                                    <button
                                         className="btn btn-outline-primary"
                                         type="submit"
                                         id="btnSubmit"

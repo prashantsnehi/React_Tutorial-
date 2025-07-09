@@ -3,12 +3,12 @@
     {
       "id": "6834",
       "empName": "Yashasvi Jaiswal",
-      "empSalary": "1350"
+      "empSalary": "1400"
     },
     {
       "id": "0548",
       "empName": "K L Rahul",
-      "empSalary": "2500"
+      "empSalary": "2550"
     },
     {
       "id": "0898",
@@ -28,12 +28,12 @@
     {
       "id": "68a2",
       "empName": "Nitish Reddy",
-      "empSalary": "1000"
+      "empSalary": "500"
     },
     {
       "id": "8ae7",
       "empName": "Ravindra Jadeja",
-      "empSalary": "1900"
+      "empSalary": "1950"
     },
     {
       "id": "3f09",
@@ -51,9 +51,9 @@
       "empSalary": "2000"
     },
     {
-      "id": "ab37",
+      "id": "2d74",
       "empName": "Prasidh Krishna",
-      "empSalary": "1100"
+      "empSalary": "100"
     }
   ]
 }
