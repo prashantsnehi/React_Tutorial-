@@ -5,6 +5,7 @@ let UpdateGlobal = () => {
     let globalState = useSelector((state) => state);
     let [toDo, setTodo] = useState("");
     let dispatch = useDispatch();
+
     return (
         <div className="row">
             <div className="col-md-12">
@@ -28,7 +29,7 @@ let UpdateGlobal = () => {
                                                 id="n"
                                                 placeholder="n"
                                                 value={globalState.n}
-                                                onChange={(e) => { dispatch({ type: "SET_N", payload: e.target.value }) }}
+                                                onChange={(e) => { dispatch({ type: "SET_N", payload: e.target.value })}}
                                             />
                                         </div>
                                     </div>
@@ -42,7 +43,7 @@ let UpdateGlobal = () => {
                                                 id="name"
                                                 placeholder="name"
                                                 value={globalState.name}
-                                                onChange={(e) => { dispatch({ type: "SET_NAME", payload: e.target.value }) }}
+                                                onChange={(e) => { dispatch({ type: "SET_NAME", payload: e.target.value.toUpperCase() }) }}
                                             />
                                         </div>
                                     </div>
@@ -80,6 +81,7 @@ let UpdateGlobal = () => {
                                                 className="form-control"
                                                 aria-label="Text input with checkbox"
                                                 value={globalState.isLoggedIn ? "Logged In" : "Logged Out"}
+                                                style={{ backgroundColor: globalState.isLoggedIn ? "#d4edda" : "#f8d7da" }}
                                             />
                                         </div>
                                         {/* <div className="form-check">
@@ -96,7 +98,7 @@ let UpdateGlobal = () => {
                                     </div>
                                 </div>
                                 <div className="row mt-3">
-                                    <div className="col-md-6">
+                                    <div className="col-md-8">
                                         <label className="visually-hidden"
                                             htmlFor="todo"></label>
                                         <div className="input-group">
@@ -106,11 +108,13 @@ let UpdateGlobal = () => {
                                                 id="todo"
                                                 placeholder="todo"
                                                 value={toDo}
+                                                style={{ backgroundColor: toDo.length == 0 ? "#f8d7da" : "#d4edda" }}
                                                 disabled
                                             />
                                         </div>
+                                        <span className="text-danger">Length of Selected Item: {toDo.length}</span>
                                     </div>
-                                    <div className="col-md-6">
+                                    <div className="col-md-4">
                                         <select className="form-select mb-3"
                                             onChange={(e) => setTodo(e.target.value)}
                                         >
