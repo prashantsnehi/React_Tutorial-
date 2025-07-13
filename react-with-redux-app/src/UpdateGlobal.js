@@ -13,10 +13,11 @@ let UpdateGlobal = () => {
                         <h2>Global State</h2>
                     </div>
                     <div className="card-body text-center">
-                        <div className="row">
+                        <div className="row" style={{ border: "5px solid #ccc", padding: "10px", margin: "10px" }}>
                             <div className="col-md-12">
-                                <div className="row g-3 d-flex justify-content-center align-items-center">
+                                <div className="row g-3 d-flex justify-content-between align-items-center">
                                     <h4 className="mb-3">Displaying Value of global variable</h4>
+                                    <hr />
                                     <div className="col-auto">
                                         <label className="visually-hidden"
                                             htmlFor="n"></label>
@@ -105,6 +106,7 @@ let UpdateGlobal = () => {
                                                 id="todo"
                                                 placeholder="todo"
                                                 value={toDo}
+                                                disabled
                                             />
                                         </div>
                                     </div>
@@ -121,6 +123,7 @@ let UpdateGlobal = () => {
                                         </select>
                                     </div>
                                 </div>
+                                <hr />
                                 <div className="row mt-3">
                                     <div className="col-md-6 d-grid gap-2">
                                         <button className="btn btn-primary"
@@ -138,9 +141,10 @@ let UpdateGlobal = () => {
                             </div>
                         </div>
                         <hr />
-                        <div className="row mt-3">
+                        <div className="row mt-3" style={{ border: "5px solid #ccc", padding: "10px", margin: "10px" }}>
                             <div className="col-md-12">
                                 <h5>Global State from Redux store:</h5>
+                                <hr />
                                 <pre>{JSON.stringify(globalState, null, 2)}</pre>
                             </div>
                         </div>
