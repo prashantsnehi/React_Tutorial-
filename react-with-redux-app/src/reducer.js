@@ -1,7 +1,7 @@
 let initialState = {
-    n: 100,
+    num: 100,
     name: "Prashant",
-    age: 47,
+    age: 1,
     isLoggedIn: true,
     isLoading: false,
     isError: false,
@@ -22,9 +22,9 @@ let initialState = {
 let reducer = (state = initialState, action) => {
     switch (action.type) {
         case "INCREMENT":
-            return { ...state, n: state.n + 1 }
+            return { ...state, num: state.num + 1 }
         case "DECREMENT":
-            return { ...state, n: state.n - 1 }
+            return { ...state, num: state.num - 1 }
         case "SET_NAME":
             return { ...state, name: action.payload }
         case "SET_AGE":
@@ -38,7 +38,7 @@ let reducer = (state = initialState, action) => {
         case "FETCH_TODOS_FAILURE":
             return { ...state, isLoading: false, isError: true }
         case "SET_N":
-            return { ...state, n: parseInt(action.payload) }
+            return { ...state, num: parseInt(action.payload) }
         default:
             return state;
     }

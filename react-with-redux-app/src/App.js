@@ -5,9 +5,9 @@ import UpdateGlobal from './UpdateGlobal';
 
 function App() {
   return (
-    <div className="container mt-4">
+    <div className="container-fluid mt-4">
       <div className="row d-flex justify-content-center align-content-center">
-        <div className="col-md-6">
+        <div className="col-md-4">
           <div className="card shadow-lg">
             <div className="card-header text-center">
               <h2>React with Redux Example</h2>
@@ -23,7 +23,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-8">
           {/* <div className="card shadow-lg">
             <div className="card-header text-center">
               <h1>React with Redux Example</h1>
